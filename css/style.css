@@ -1,0 +1,139 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-size: 16px;
+     font-family: 'Quicksand', sans-serif;
+     list-style-type: none;
+     text-decoration: none;
+     scroll-behavior: smooth;
+     font-weight: 300;
+}
+
+
+#app {
+     scroll-behavior: smooth;
+     background-color: #F3F3F3;
+}
+
+
+
+#test {
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+#test .searchbar{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+} 
+
+#test .arrows {
+     height: 10vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+#test i {
+     font-size: 30px;
+     margin-left: 20px;
+}
+
+
+#test #carousel {
+     height: 80vh;
+     width: 100%;
+     position: relative;
+}
+
+#test #carousel .slides {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     top: 0;
+     left: 0;
+}
+
+#test #carousel img {
+     height: 90%;
+     width: auto;
+     border-radius: 30px;
+     /* margin: 50px 0; */
+}
+
+#test #carousel h1 {
+     font-size: 30px;
+     height: 10%;
+}
+
+.fade-enter {
+     opacity: 0;
+}
+     
+     .fade-enter-active {
+     transition: opacity 1s;
+}
+     
+     .slides-next-enter-active,
+     .slides-next-leave-active {
+     transition: all 0.5s ease-in-out;
+}
+
+     .slides-next-enter {
+     transform: translate(100%);
+}
+
+     .slides-next-leave-to {
+     transform: translate(-100%);
+     opacity: 0;
+}
+     
+     /* GO TO PREVIOUS SLIDE */
+     .slides-prev-enter-active,
+     .slides-prev-leave-active {
+     transition: all 0.5s ease-in-out;
+}
+
+     .slides-prev-enter {
+     transform: translate(-100%);
+}
+
+     .slides-prev-leave-to {
+     transform: translate(100%);
+     opacity: 0;
+}
+
+@media (max-width: 1400px) AND (min-width: 1250px) {
+
+     #test #carousel {
+          height: 70%;
+     }
+}
+
+@media (max-width: 1250px) AND (min-width: 850px) {
+
+     #test #carousel {
+          height: 50%;
+     }
+}
+
+@media (max-width: 850px) AND (min-width: 500px) {
+
+     #test #carousel {
+          height: 30%;
+     }
+
+     #test #carousel h1 {
+          margin-bottom: 10px;
+     }
+}
